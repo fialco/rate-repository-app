@@ -1,4 +1,5 @@
-import { View, StyleSheet, Pressable, Alert, Text } from 'react-native';
+import { View, StyleSheet, Text, ScrollView } from 'react-native';
+import { Link } from 'react-router-native';
 import Constants from 'expo-constants';
 
 import theme from '../theme';
@@ -17,29 +18,22 @@ const styles = StyleSheet.create({
   }
 });
 
-const AppBarTab = ({ tabName, onPress }) => {
+const AppBarTab = ({ tabName, path }) => {
   return (
-    <Pressable onPress={onPress}>
+    <Link to={path}>
       <Text style={styles.text}>{tabName}</Text>
-    </Pressable>
+    </Link>
   );
 };
 
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <AppBarTab
-        tabName={'Repositories'}
-        onPress={() => Alert.alert('Testing repo')}
-      />
-      <AppBarTab
-        tabName={'Create a review'}
-        onPress={() => Alert.alert('Testing create')}
-      />
-      <AppBarTab
-        tabName={'Sign out'}
-        onPress={() => Alert.alert('Testing sign out')}
-      />
+      <ScrollView horizontal>
+        <AppBarTab tabName={'Repositories'} path={'/'} />
+        <AppBarTab tabName={'Create a review'} path={'/create'} />
+        <AppBarTab tabName={'Sign in'} path={'/signin'} />
+      </ScrollView>
     </View>
   );
 };
