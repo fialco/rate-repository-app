@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   text: {
-    color: theme.colors.textBar,
+    color: theme.colors.textTertiary,
     padding: 14,
     fontSize: theme.fontSizes.subheading,
     fontWeight: theme.fontWeights.bold
