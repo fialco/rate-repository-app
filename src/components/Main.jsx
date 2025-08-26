@@ -5,11 +5,13 @@ import AppBar from './AppBar';
 import RepositoryList from './RepositoryList';
 import SignIn from './SignIn';
 import Create from './Create';
+import theme from '../theme';
 
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    flexShrink: 1
+    flexShrink: 1,
+    backgroundColor: theme.colors.background
   }
 });
 

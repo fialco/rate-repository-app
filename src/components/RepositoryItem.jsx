@@ -5,7 +5,8 @@ import Text from './Text';
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 15
+    paddingVertical: 15,
+    backgroundColor: theme.colors.foreground
   },
   containerInfo: {
     flexDirection: 'column',

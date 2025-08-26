@@ -5,7 +5,9 @@ const theme = {
     textTertiary: '#ffffffff',
     primary: '#0366d6',
     backgroundBar: '#24292e',
-    backgroundSeparator: '#f1f1f1ff'
+    background: '#f1f1f1ff',
+    foreground: '#ffffffff',
+    error: '#d73a4a'
   },
   fontSizes: {
     body: 14,
